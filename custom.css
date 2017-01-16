@@ -1,0 +1,7 @@
+/* (C) Copyright Bobbing Wide 2013-2017 */
+ @import url('../../plugins/oik-bob-bing-wide/bwlink.css' );
+
+a.bwlogo { text-decoration: none; padding-left: 3%; padding-top: 3%; }
+a.bwlogo em {  font-style: italic; }
+
+.sd-content ul>li:before { content: none; }
