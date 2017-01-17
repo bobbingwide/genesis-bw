@@ -6,7 +6,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'workstation', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'workstation' ) );
+load_child_theme_textdomain( 'genesis_bw', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'genesis_bw' ) );
 
 //* Add Image upload and Color select to WordPress Theme Customizer
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -15,23 +15,23 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'Workstation Pro Theme', 'workstation' ) );
-define( 'CHILD_THEME_URL', 'http://my.studiopress.com/themes/workstation/' );
+define( 'CHILD_THEME_NAME', __( 'Genesis BW Theme', 'genesis_bw' ) );
+define( 'CHILD_THEME_URL', 'http://my.bobbingwide.com/themes/genesis_bw/' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Google Fonts
-add_action( 'wp_enqueue_scripts', 'workstation_enqueue_scripts_styles' );
-function workstation_enqueue_scripts_styles() {
+add_action( 'wp_enqueue_scripts', 'genesis_bw_enqueue_scripts_styles' );
+function genesis_bw_enqueue_scripts_styles() {
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_script( 'workstation-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'genesis_bw-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 	$output = array(
-		'mainMenu' => __( 'Menu', 'workstation' ),
-		'subMenu'  => __( 'Menu', 'workstation' ),
+		'mainMenu' => __( 'Menu', 'genesis_bw' ),
+		'subMenu'  => __( 'Menu', 'genesis-bw' ),
 	);
-	wp_localize_script( 'workstation-responsive-menu', 'WorkstationL10n', $output );
+	wp_localize_script( 'genesis_bw-responsive-menu', 'Genesis_bwL10n', $output );
 
 }
 
@@ -78,7 +78,7 @@ unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
 
 //* Rename Primary Menu
-add_theme_support ( 'genesis-menus' , array ( 'primary' => __( 'Header Navigation Menu', 'workstation' ), 'secondary' => __( 'Before Header Navigation Menu', 'workstation' ) ) );
+add_theme_support ( 'genesis-menus' , array ( 'primary' => __( 'Header Navigation Menu', 'genesis-bw' ), 'secondary' => __( 'Before Header Navigation Menu', 'genesis-bw' ) ) );
 
 //* Remove output of primary navigation right extras
 remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
@@ -92,8 +92,8 @@ add_action( 'genesis_header', 'genesis_do_nav', 5 );
 
 
 //* Remove skip link for primary navigation and add skip link for footer widgets
-add_filter( 'genesis_skip_links_output', 'workstation_skip_links_output' );
-function workstation_skip_links_output( $links ){
+add_filter( 'genesis_skip_links_output', 'genesis_bw_skip_links_output' );
+function genesis_bw_skip_links_output( $links ){
 
 	if( isset( $links['genesis-nav-primary'] ) ){
 		unset( $links['genesis-nav-primary'] );
@@ -103,7 +103,7 @@ function workstation_skip_links_output( $links ){
 	array_splice( $new_links, 3 );
 
 	if ( is_active_sidebar( 'flex-footer' ) ) {
-		$new_links['footer'] = __( 'Skip to footer', 'workstation' );
+		$new_links['footer'] = __( 'Skip to footer', 'genesis-bw' );
 	}
 
 	return array_merge( $new_links, $links );
@@ -119,8 +119,8 @@ remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 5 );
 
 //* Add featured image above the entry content
-add_action( 'genesis_entry_header', 'workstation_featured_photo', 5 );
-function workstation_featured_photo() {
+add_action( 'genesis_entry_header', 'genesis_bw_featured_photo', 5 );
+function genesis_bw_featured_photo() {
 
 	if ( is_attachment() || ! genesis_get_option( 'content_archive_thumbnail' ) )
 		return;
@@ -135,54 +135,54 @@ function workstation_featured_photo() {
 add_post_type_support( 'page', 'excerpt' );
 
 //* Output Excerpt on Pages
-add_action( 'genesis_meta', 'workstation_page_description_meta' );
-function workstation_page_description_meta() {
+add_action( 'genesis_meta', 'genesis_bw_page_description_meta' );
+function genesis_bw_page_description_meta() {
 
 	if ( is_front_page() ) {
 		remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
 		add_action( 'genesis_after_header', 'genesis_seo_site_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 
 	if ( is_archive() && ! is_post_type_archive() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
 		add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 	
 	if ( is_post_type_archive() && genesis_has_post_type_archive_support() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
 		add_action( 'genesis_after_header', 'genesis_do_cpt_archive_title_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 	
 	if( is_author() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
 		add_action( 'genesis_after_header', 'genesis_do_author_title_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 
 	if ( is_page_template( 'page_blog.php' ) && has_excerpt() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
-		add_action( 'genesis_after_header', 'workstation_add_page_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_add_page_description', 10 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 	
 	elseif ( is_singular() && is_page() && has_excerpt() ) {
 		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-		add_action( 'genesis_after_header', 'workstation_open_after_header', 5 );
-		add_action( 'genesis_after_header', 'workstation_add_page_description', 10 );
-		add_action( 'genesis_after_header', 'workstation_close_after_header', 15 );
+		add_action( 'genesis_after_header', 'genesis_bw_open_after_header', 5 );
+		add_action( 'genesis_after_header', 'genesis_bw_add_page_description', 10 );
+		add_action( 'genesis_after_header', 'genesis_bw_close_after_header', 15 );
 	}
 
 }
 
-function workstation_add_page_description() {
+function genesis_bw_add_page_description() {
 
 	echo '<div class="page-description">';
 	echo '<h1 itemprop="headline" class="page-title">' . get_the_title() . '</h1>';
@@ -190,16 +190,16 @@ function workstation_add_page_description() {
 
 }
 
-function workstation_open_after_header() {
+function genesis_bw_open_after_header() {
 	echo '<div class="after-header"><div class="wrap">';
 }
 
-function workstation_close_after_header() {
+function genesis_bw_close_after_header() {
 	echo '</div></div>';
 }
 
 //* Setup widget counts
-function workstation_count_widgets( $id ) {
+function genesis_bw_count_widgets( $id ) {
 
 	global $sidebars_widgets;
 
@@ -209,9 +209,9 @@ function workstation_count_widgets( $id ) {
 
 }
 
-function workstation_widget_area_class( $id ) {
+function genesis_bw_widget_area_class( $id ) {
 
-	$count = workstation_count_widgets( $id );
+	$count = genesis_bw_count_widgets( $id );
 
 	$class = '';
 
@@ -234,11 +234,11 @@ function workstation_widget_area_class( $id ) {
 }
 
 //* Add the flexible footer widget area
-add_action( 'genesis_before_footer', 'workstation_footer_widgets' );
-function workstation_footer_widgets() {
+add_action( 'genesis_before_footer', 'genesis_bw_footer_widgets' );
+function genesis_bw_footer_widgets() {
 
 	genesis_widget_area( 'flex-footer', array(
-		'before' => '<div id="footer" class="flex-footer footer-widgets"><h2 class="genesis-sidebar-title screen-reader-text">' . __( 'Footer', 'workstation' ) . '</h2><div class="flexible-widgets widget-area wrap' . workstation_widget_area_class( 'flex-footer' ) . '">',
+		'before' => '<div id="footer" class="flex-footer footer-widgets"><h2 class="genesis-sidebar-title screen-reader-text">' . __( 'Footer', 'genesis-bw' ) . '</h2><div class="flexible-widgets widget-area wrap' . genesis_bw_widget_area_class( 'flex-footer' ) . '">',
 		'after'  => '</div></div>',
 	) );
 
@@ -247,26 +247,26 @@ function workstation_footer_widgets() {
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'          => 'front-page-1',
-	'name'        => __( 'Front Page 1', 'workstation' ),
-	'description' => __( 'This is the front page 1 section.', 'workstation' ),
+	'name'        => __( 'Front Page 1', 'genesis-bw' ),
+	'description' => __( 'This is the front page 1 section.', 'genesis-bw' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'workstation' ),
-	'description' => __( 'This is the front page 2 section.', 'workstation' ),
+	'name'        => __( 'Front Page 2', 'genesis-bw' ),
+	'description' => __( 'This is the front page 2 section.', 'genesis-bw' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'workstation' ),
-	'description' => __( 'This is the front page 3 section.', 'workstation' ),
+	'name'        => __( 'Front Page 3', 'genesis-bw' ),
+	'description' => __( 'This is the front page 3 section.', 'genesis-bw' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-4',
-	'name'        => __( 'Front Page 4', 'workstation' ),
-	'description' => __( 'This is the front page 4 section.', 'workstation' ),
+	'name'        => __( 'Front Page 4', 'genesis-bw' ),
+	'description' => __( 'This is the front page 4 section.', 'genesis-bw' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'flex-footer',
-	'name'        => __( 'Flexible Footer', 'workstation' ),
-	'description' => __( 'This is the footer section.', 'workstation' ),
+	'name'        => __( 'Flexible Footer', 'genesis-bw' ),
+	'description' => __( 'This is the footer section.', 'genesis-bw' ),
 ) );

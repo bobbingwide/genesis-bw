@@ -1,9 +1,8 @@
 <?php
 /**
- * This file adds the Landing template to the Workstation Pro Theme.
+ * This file adds the Landing template to the Genesis BW Theme.
  *
- * @author StudioPress
- * @package Studio
+ * @author bobbingwide
  * @subpackage Customizations
  */
 
@@ -12,8 +11,8 @@ Template Name: Landing
 */
 
 //* Add custom body class to the head
-add_filter( 'body_class', 'workstation_add_body_class' );
-function workstation_add_body_class( $classes ) {
+add_filter( 'body_class', 'genesis_bw_add_body_class' );
+function genesis_bw_add_body_class( $classes ) {
 
    $classes[] = 'landing-page';
 
@@ -22,7 +21,7 @@ function workstation_add_body_class( $classes ) {
 }
 
 //* Remove skip link for primary navigation
-remove_filter( 'genesis_skip_links_output', 'workstation_skip_links_output' );
+remove_filter( 'genesis_skip_links_output', 'genesis_bw_skip_links_output' );
 
 //* Force full width content layout
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
@@ -39,7 +38,7 @@ remove_theme_support( 'genesis-menus' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 //* Remove site footer widgets
-remove_action( 'genesis_before_footer', 'workstation_footer_widgets' );
+remove_action( 'genesis_before_footer', 'genesis_bw_footer_widgets' );
 
 //* Remove site footer elements
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );

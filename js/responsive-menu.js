@@ -4,11 +4,11 @@
 
 	'use strict';
 
-	var workstation              = {},
+	var genesis_bw              = {},
 		mainMenuButtonClass = 'menu-toggle',
 		subMenuButtonClass  = 'sub-menu-toggle';
 
-	workstation.init = function() {
+	genesis_bw.init = function() {
 		var toggleButtons = {
 			menu : $( '<button />', {
 				'class' : mainMenuButtonClass,
@@ -16,7 +16,7 @@
 				'aria-pressed' : false,
 				'role' : 'button'
 				} )
-				.append( workstation.params.mainMenu ),
+				.append( genesis_bw.params.mainMenu ),
 			submenu : $( '<button />', {
 				'class' : subMenuButtonClass,
 				'aria-expanded' : false,
@@ -25,15 +25,15 @@
 				} )
 				.append( $( '<span />', {
 					'class' : 'screen-reader-text',
-					text : workstation.params.subMenu
+					text : genesis_bw.params.subMenu
 				} ) )
 		};
 		$( '.nav-primary' ).before( toggleButtons.menu ); // add the main nav buttons
 		$( 'nav .sub-menu' ).before( toggleButtons.submenu ); // add the submenu nav buttons
 		$( '.' + mainMenuButtonClass ).each( _addClassID );
-		$( window ).on( 'resize.workstation', _doResize ).triggerHandler( 'resize.workstation' );
-		$( '.' + mainMenuButtonClass ).on( 'click.workstation-mainbutton', _mainmenuToggle );
-		$( '.' + subMenuButtonClass ).on( 'click.workstation-subbutton', _submenuToggle );
+		$( window ).on( 'resize.genesis_bw', _doResize ).triggerHandler( 'resize.genesis_bw' );
+		$( '.' + mainMenuButtonClass ).on( 'click.genesis_bw-mainbutton', _mainmenuToggle );
+		$( '.' + subMenuButtonClass ).on( 'click.genesis_bw-subbutton', _submenuToggle );
 	};
 
 	// add nav class and ID to related button
@@ -178,10 +178,10 @@
 		// run test on resize of the window
 		$( window ).resize( _combineMenus );
 		
-		workstation.params = typeof WorkstationL10n === 'undefined' ? '' : WorkstationL10n;
+		genesis_bw.params = typeof Genesis_bwL10n === 'undefined' ? '' : Genesis_bwL10n;
 
-		if ( typeof workstation.params !== 'undefined' ) {
-			workstation.init();
+		if ( typeof genesis_bw.params !== 'undefined' ) {
+			genesis_bw.init();
 		}
 
 	});

@@ -3,9 +3,9 @@
 /**
  * Customizer additions.
  *
- * @package Workstation Pro
- * @author  StudioPress
- * @link    http://my.studiopress.com/themes/workstation/
+ * @package Genesis BW
+ * @author  bobbingwide
+ * @link    http://my.bobbingwide.com/themes/genesis-bw/
  * @license GPL2-0+
  */
 
@@ -18,11 +18,11 @@
  *
  * @return string Hex color code for accent color.
  */
-function workstation_customizer_get_default_accent_color() {
+function genesis_bw_customizer_get_default_accent_color() {
 	return '#ff4800';
 }
 
-add_action( 'customize_register', 'workstation_customizer_register' );
+add_action( 'customize_register', 'genesis_bw_customizer_register' );
 /**
  * Register settings and controls with the Customizer.
  *
@@ -30,38 +30,38 @@ add_action( 'customize_register', 'workstation_customizer_register' );
  * 
  * @param WP_Customize_Manager $wp_customize Customizer object.
  */
-function workstation_customizer_register() {
+function genesis_bw_customizer_register() {
 
 	global $wp_customize;
 
-	$images = apply_filters( 'workstation_images', array( '1', '2' ) );
+	$images = apply_filters( 'genesis_bw_images', array( '1', '2' ) );
 
-	$wp_customize->add_section( 'workstation-settings', array(
-		'description' => __( 'Use the included default images or personalize your site by uploading your own images.<br /><br />The default images are <strong>1800 pixels wide and 500 pixels tall</strong>.', 'workstation' ),
-		'title'    => __( 'Front Page Background Images', 'workstation' ),
+	$wp_customize->add_section( 'genesis-bw-settings', array(
+		'description' => __( 'Use the included default images or personalize your site by uploading your own images.<br /><br />The default images are <strong>1800 pixels wide and 500 pixels tall</strong>.', 'genesis-bw' ),
+		'title'    => __( 'Front Page Background Images', 'genesis-bw' ),
 		'priority' => 35,
 	) );
 
 	foreach( $images as $image ){
 
-		$wp_customize->add_setting( $image .'-workstation-image', array(
+		$wp_customize->add_setting( $image .'-genesis-bw-image', array(
 			'default'  => sprintf( '%s/images/bg-%s.jpg', get_stylesheet_directory_uri(), $image ),
 			'type'     => 'option',
 		) );
 
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $image .'-workstation-image', array(
-			'label'    => sprintf( __( 'Featured Section %s Image:', 'workstation' ), $image ),
-			'section'  => 'workstation-settings',
-			'settings' => $image .'-workstation-image',
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $image .'-genesis-bw-image', array(
+			'label'    => sprintf( __( 'Featured Section %s Image:', 'genesis-bw' ), $image ),
+			'section'  => 'genesis-bw-settings',
+			'settings' => $image .'-genesis-bw-image',
 			'priority' => $image+1,
 		) ) );
 
 	}
 
 	$wp_customize->add_setting(
-		'workstation_accent_color',
+		'genesis_bw_accent_color',
 		array(
-			'default' => workstation_customizer_get_default_accent_color(),
+			'default' => genesis_bw_customizer_get_default_accent_color(),
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -69,12 +69,12 @@ function workstation_customizer_register() {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'workstation_accent_color',
+			'genesis_bw_accent_color',
 			array(
-				'description' => __( 'Change the default accent color for links, buttons, and more.', 'workstation' ),
-			    'label'       => __( 'Accent Color', 'workstation' ),
+				'description' => __( 'Change the default accent color for links, buttons, and more.', 'genesis-bw' ),
+			    'label'       => __( 'Accent Color', 'genesis-bw' ),
 			    'section'     => 'colors',
-			    'settings'    => 'workstation_accent_color',
+			    'settings'    => 'genesis_bw_accent_color',
 			)
 		)
 	);

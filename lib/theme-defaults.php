@@ -1,8 +1,8 @@
 <?php
 
-//* Workstation Theme Setting Defaults
-add_filter( 'genesis_theme_settings_defaults', 'workstation_theme_defaults' );
-function workstation_theme_defaults( $defaults ) {
+//* Genesis BW Theme Setting Defaults
+add_filter( 'genesis_theme_settings_defaults', 'genesis_bw_theme_defaults' );
+function genesis_bw_theme_defaults( $defaults ) {
 
 	$defaults['blog_cat_num']              = 6;
 	$defaults['content_archive']           = 'full';
@@ -17,9 +17,9 @@ function workstation_theme_defaults( $defaults ) {
 
 }
 
-//* Workstation Theme Setup
-add_action( 'after_switch_theme', 'workstation_theme_setting_defaults' );
-function workstation_theme_setting_defaults() {
+//* Genesis BW Theme Setup
+add_action( 'after_switch_theme', 'genesis_bw_theme_setting_defaults' );
+function genesis_bw_theme_setting_defaults() {
 
 	if( function_exists( 'genesis_update_settings' ) ) {
 
@@ -41,8 +41,8 @@ function workstation_theme_setting_defaults() {
 }
 
 //* Simple Social Icon Defaults
-add_filter( 'simple_social_default_styles', 'workstation_social_default_styles' );
-function workstation_social_default_styles( $defaults ) {
+add_filter( 'simple_social_default_styles', 'genesis_bw_social_default_styles' );
+function genesis_bw_social_default_styles( $defaults ) {
 
 	$args = array(
 		'alignment'              => 'aligncenter',
