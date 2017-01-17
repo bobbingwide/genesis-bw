@@ -16,7 +16,7 @@ include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Genesis BW Theme', 'genesis_bw' ) );
-define( 'CHILD_THEME_URL', 'http://my.bobbingwide.com/themes/genesis_bw/' );
+define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes/genesis-bw/' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Google Fonts
@@ -119,7 +119,7 @@ remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 add_action( 'genesis_entry_header', 'genesis_do_post_image', 5 );
 
 //* Add featured image above the entry content
-add_action( 'genesis_entry_header', 'genesis_bw_featured_photo', 5 );
+//add_action( 'genesis_entry_header', 'genesis_bw_featured_photo', 5 );
 function genesis_bw_featured_photo() {
 
 	if ( is_attachment() || ! genesis_get_option( 'content_archive_thumbnail' ) )
@@ -270,3 +270,30 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Flexible Footer', 'genesis-bw' ),
 	'description' => __( 'This is the footer section.', 'genesis-bw' ),
 ) );
+
+add_theme_support( 'woocommerce' );
+
+add_filter( 'genesis_footer_creds_text', "genesis_bw_footer_creds_text" );
+
+/**
+ * Implement 'genesis_footer_creds_text' filter 
+ *
+ * @param string $creds_text
+ * @return string what we want
+ */
+
+function genesis_bw_footer_creds_text( $text ) {
+	do_action( "oik_add_shortcodes" );
+	$text = "[bw_wpadmin]";
+  $text .= '<br />';
+	$text .= "[bw_copyright]"; 
+	$text .= '<hr />';
+	$text .= 'Website designed and developed by [bw_link text="Herb Miller" herbmiller.me]';
+	$text .= '<br />';
+	$text .= '[bw_power]';
+	$text .= ' and <a href="//oik-plugins.com" title="oik plugins">oik plugins</a>';
+	$text .= '<br />';
+	$text .= ' [footer_childtheme_link before="Running: " after=" with "]';
+	$text .= ' [footer_genesis_link url="http://www.studiopress.com/" before=""]';
+  return( $text );
+}
