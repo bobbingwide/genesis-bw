@@ -18,7 +18,9 @@ function genesis_bw_theme_defaults( $defaults ) {
 }
 
 //* Genesis BW Theme Setup
-add_action( 'after_switch_theme', 'genesis_bw_theme_setting_defaults' );
+// That's some annoying behaviour
+
+//add_action( 'after_switch_theme', 'genesis_bw_theme_setting_defaults' );
 function genesis_bw_theme_setting_defaults() {
 
 	if( function_exists( 'genesis_update_settings' ) ) {
