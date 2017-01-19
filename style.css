@@ -420,7 +420,7 @@ input[type="submit"],
 	line-height: 1;
 	padding: 20px 24px;
 	text-decoration: none;
-	text-transform: uppercase;
+	text-transform: none;
 	width: auto;
 }
 
@@ -1465,6 +1465,11 @@ img.alignright,
 	margin-bottom: 100px;
 }
 
+img.entry { 
+	margin-bottom: 0px;
+	padding: 0px;
+}       
+
 .content .entry-image {
 	margin-bottom: 40px;
 }
@@ -1654,9 +1659,9 @@ p.entry-meta {
 }
 
 .footer-widgets li {
-	border-bottom: 1px dotted #666;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
+	border-bottom: 0px dotted #666;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 .footer-widgets p:last-child {
