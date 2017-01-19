@@ -5,3 +5,70 @@ a.bwlogo { text-decoration: none; padding-left: 3%; padding-top: 3%; }
 a.bwlogo em {  font-style: italic; }
 
 .sd-content ul>li:before { content: none; }
+
+span.label._screenshot,
+div._screenshot span.sep { 
+	display:none; 
+}
+div._screenshot span.value {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+	
+}
+
+div._screenshot span.value img {
+	border: 1px solid #ff4800;
+	margin: 0 auto 0 0;
+	position: relative;
+	display: block;
+}
+
+
+div._screenshot span.value a {
+ 	position: absolute;
+	bottom: 0%;
+	width: auto;
+	margin: 0em auto 0 0;
+	text-align: center;
+	color: white;
+	background-color: #ff4800;
+	text-decoration: none;
+	padding: 3px;
+	opacity: .7;
+}
+
+div._screenshot span.value a:hover {
+	opacity: 1;
+	background-color: #222;
+}
+
+div.plugin-info a {
+	text-decoration: none;
+}
+
+.front-page-3 .dashicons {
+	font-size: 1000%;
+	display: block;
+	text-align: left;
+	line-height: 1.1;
+}
+
+.front-page-3 a.button {
+	border-radius: 3px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding: 12px 24px;
+}
+
+div.slider-wrapper {
+	width: 70%;
+	border: 1px solid grey;
+}
+
+a.bwlogo {
+	display: block;
+	text-align: right;
+}
+
