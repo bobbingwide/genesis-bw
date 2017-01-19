@@ -17,7 +17,13 @@ include_once( get_stylesheet_directory() . '/lib/output.php' );
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Genesis BW Theme', 'genesis_bw' ) );
 define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes/genesis-bw/' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	$timestamp = filemtime( get_stylesheet_directory() . "/style.css" );
+	define( 'CHILD_THEME_VERSION', $timestamp );
+} else { 
+	define( 'CHILD_THEME_VERSION', '0.0.0' );
+}
 
 //* Enqueue Google Fonts
 add_action( 'wp_enqueue_scripts', 'genesis_bw_enqueue_scripts_styles' );
@@ -76,6 +82,8 @@ unregister_sidebar( 'sidebar-alt' );
 
 //* Unregister the header right widget area
 unregister_sidebar( 'header-right' );
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
 
 //* Rename Primary Menu
 add_theme_support ( 'genesis-menus' , array ( 'primary' => __( 'Header Navigation Menu', 'genesis-bw' ), 'secondary' => __( 'Before Header Navigation Menu', 'genesis-bw' ) ) );
@@ -295,5 +303,6 @@ function genesis_bw_footer_creds_text( $text ) {
 	$text .= '<br />';
 	$text .= ' [footer_childtheme_link before="Running: " after=" with "]';
 	$text .= ' [footer_genesis_link url="http://www.studiopress.com/" before=""]';
+	$text .= ' <a href="http://www.bobbingwide.com" title="bobbing wide - web design web development" class="bwlogo">[bw cp=h]</a>';
   return( $text );
 }
