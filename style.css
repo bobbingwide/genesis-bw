@@ -5,9 +5,9 @@ Description: Genesis child theme for Bobbing Wide
 Author: Bobbing Wide 
 Author URI: http://bobbingwide.com/author/bobbingwide
 
-Version: 0.0.0
+Version: 0.0.1
 
-Template: Genesis
+Template: genesis
 Template Version: 2.4.2
 
 Tags: develop, black, orange, white, one-column, two-columns, left-sidebar, right-sidebar, responsive-layout, accessibility-ready, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
@@ -254,8 +254,8 @@ h6 {
 }
 
 h1 {
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 40px;
+	font-size: 4.0rem;
 }
 
 h2 {
@@ -771,8 +771,8 @@ th {
 --------------------------------------------- */
 
 .entry-title {
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 40px;
+	font-size: 4.0rem;
 	margin-bottom: 40px;
 }
 
@@ -801,8 +801,8 @@ th {
 }
 
 .large-title {
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 40px;
+	font-size: 4.0rem;
 	line-height: 1.2;
 }
 
@@ -1144,8 +1144,8 @@ img.alignright,
 .after-header .page-description p,
 .after-header .site-description {
 	clear: both;
-	font-size: 48px;
-	font-size: 4.8rem;
+	font-size: 40px;
+	font-size: 4.0rem;
 	line-height: 1.2;
 	max-width: 720px;
 }
@@ -1993,6 +1993,7 @@ p.entry-meta {
 	.large-title {
 		font-size: 30px;
 		font-size: 3.6rem;
+		text-align: center;
 	}
 
 	.flexible-widgets .featured-content .has-post-thumbnail .alignnone + .entry-header {
