@@ -1,0 +1,100 @@
+/** (C) Copyright Bobbing Wide 2016
+ */
+ 
+
+.post-type-archive h2,
+.post-type-archive-oik-plugins h2,
+.post-type-archive-oik_request h2 { 
+	font-size: 18px;
+	margin: 0px 0px 0px 0px;
+}
+
+/**
+.post-type-archive .entry {
+	margin-bottom: 2px;
+	padding: 2px 20px;
+}
+*/
+
+.post-type-archive p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.post-type-archive article {
+	width: 31.3333%; 
+	float: left;
+	padding: 2px 0.5%;
+	margin: 2px 0.5% 15px 0.5%;
+	position: relative; 
+}
+
+/* Enable images to appear to be the same height */
+
+.post-type-archive-oik-plugins article:after {
+	padding-top: 40%;
+	background-color: white;
+}
+
+.post-type-archive-oik-themes article:after,
+.post-type-archive-portfolio article:after {
+	padding-top: 85%;
+	background-color: white;
+}
+
+
+
+article.oik-plugins,
+article.oik-themes,
+article.portfolio{
+	height: auto;
+    overflow: hidden;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+article.oik-plugins img,
+article.oik-themes img,
+article.portfolio img {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 100%;
+  border: 1px solid #808080; 
+	
+}
+.content .oik-themes.entry {
+	/* background-color: #cccccc; */
+}
+
+article.oik-themes:hover {
+	/* border: 1px  solid grey; */
+}
+
+h2.entry-title {
+	padding: 7px 5px 7px 10px;
+}
+
+article header:hover {
+	/* background-color: #eeeeee; */
+}
+
+@media screen and ( max-width: 768px ) {
+
+.post-type-archive article {
+	width: 48%;
+}
+
+}
+
+
+
+
+@media screen and ( max-width: 480px ) {
+
+.post-type-archive article {
+	width: 98%;
+}
+
+}
+
