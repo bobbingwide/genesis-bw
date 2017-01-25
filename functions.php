@@ -65,7 +65,16 @@ add_theme_support( 'genesis-structural-wraps', array(
 	'footer',
 ) );
 
-//* Add support for after entry widget
+//* Add support for after entry widget... this only works for post
+// We need add_post_type_support( 
+
+$post_types = array( 'oik-plugins','oik_pluginversion', 'oik_premiumversion'
+									, 'oik-themes', 'oik_themeversion', 'oik_themiumversion'
+									, 'oik_shortcodes' );
+foreach ( $post_types as $post_type ) {
+	add_post_type_support( $post_type, 'genesis-after-entry-widget-area' );
+}
+
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add new image sizes
