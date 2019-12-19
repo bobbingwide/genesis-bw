@@ -17,7 +17,7 @@ include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Genesis BW Theme', 'genesis_bw' ) );
-define( 'CHILD_THEME_URL', 'http://www.bobbingwide.com/oik-themes/genesis-bw/' );
+define( 'CHILD_THEME_URL', 'https://www.bobbingwide.com/oik-themes/genesis-bw/' );
 
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 	$timestamp = filemtime( get_stylesheet_directory() . "/style.css" );
@@ -295,7 +295,7 @@ genesis_register_sidebar( array(
 
 add_theme_support( 'woocommerce' );
 
-add_filter( 'genesis_footer_creds_text', "genesis_bw_footer_creds_text" );
+add_filter( 'genesis_pre_get_option_footer_text', 'genesis_bw_footer_creds_text' );
 
 /**
  * Implement 'genesis_footer_creds_text' filter 
