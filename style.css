@@ -394,6 +394,9 @@ input[type="radio"] {
 	width: auto;
 }
 
+div.quantity input[type="number"] {
+	padding: 10px 0px;
+}
 ::-moz-placeholder {
 	color: #222;
 	opacity: 1;

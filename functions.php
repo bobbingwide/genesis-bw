@@ -1,4 +1,5 @@
-<?php
+<?php	// (C) Copright Bobbing Wide 2017
+
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
 
@@ -70,9 +71,13 @@ add_theme_support( 'genesis-structural-wraps', array(
 
 $post_types = array( 'oik-plugins','oik_pluginversion', 'oik_premiumversion'
 									, 'oik-themes', 'oik_themeversion', 'oik_themiumversion'
-									, 'oik_shortcodes' );
+									, 'oik_shortcodes', 'portfolio' );
 foreach ( $post_types as $post_type ) {
 	add_post_type_support( $post_type, 'genesis-after-entry-widget-area' );
+}
+$post_types[] = "portfolio";
+foreach ( $post_types as $post_type ) {
+	add_post_type_support( $post_type, 'publicize' );
 }
 
 add_theme_support( 'genesis-after-entry-widget-area' );
@@ -314,4 +319,36 @@ function genesis_bw_footer_creds_text( $text ) {
 	$text .= ' [footer_genesis_link url="http://www.studiopress.com/" before=""]';
 	$text .= ' <a href="http://www.bobbingwide.com" title="bobbing wide - web design web development" class="bwlogo">[bw cp=h]</a>';
   return( $text );
+}
+/**
+ * Disable the WPSEO v3.1+ Primary Category feature.
+ */
+add_filter( 'wpseo_primary_term_taxonomies', '__return_empty_array' );
+
+
+//add_filter( 'woocommerce_empty_price_html', "genesis_bw_woocommerce_empty_price_html", 10, 2 );
+
+function genesis_bw_woocommerce_empty_price_html( $price, $wc_product ) {
+	return( "Call for price" );
+}
+
+add_filter( 'woocommerce_get_price_html', "genesis_bw_woocommerce_get_price_html", 10, 2 );
+/**
+ * Gets the price
+ * 
+ * Applies a prefix or suffix depending on the product.
+ * 
+ * - Websites are sold individually; prefix with "From:".
+ * - Services are per hour; append " per hour".
+ *
+ * @param string $price the HTML price
+ * @param object $wc_product 
+ */ 
+function genesis_bw_woocommerce_get_price_html( $price, $wc_product ) {
+	if ( $wc_product->is_sold_individually() ) {
+		$price = "From: $price";
+	} else {
+		$price .= " per hour";
+	}
+	return $price;
 }
