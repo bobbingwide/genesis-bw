@@ -153,7 +153,7 @@ body > div {
 body {
 	background-color: #fff;
 	color: #222;
-	font-family: 'Baskerville', Garamond, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+	/* font-family: 'Baskerville', Garamond, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif; */
 	font-size: 18px;
 	font-size: 1.8rem;
 	font-weight: 300;
@@ -373,7 +373,7 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	color: #222;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 300;
@@ -416,7 +416,7 @@ input[type="submit"],
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	letter-spacing: 1px;
@@ -709,7 +709,7 @@ th {
 --------------------------------------------- */
 
 .breadcrumb {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 14px;
 	font-size: 1.4rem;
 	letter-spacing: 2px;
@@ -795,7 +795,7 @@ th {
 .page-title,
 .widget-title {
 	color: #ff4800;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	letter-spacing: 2px;
@@ -921,7 +921,7 @@ img.alignright,
 
 .widget .list li {
 	border-bottom: 1px dotted #ddd;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	text-transform: uppercase;
 }
 
@@ -1088,7 +1088,7 @@ img.alignright,
 }
 
 .site-title {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 24px;
 	font-size: 2.4rem;
 	font-weight: 300;
@@ -1291,7 +1291,7 @@ img.alignright,
 
 .nav-secondary {
 	background-color: #222;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 }
 
 .nav-secondary .genesis-nav-menu a {
@@ -1505,7 +1505,7 @@ img.entry {
 --------------------------------------------- */
 
 p.entry-meta {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	margin-bottom: 0;
@@ -1558,7 +1558,7 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: sans-serif;
 	color: #222;
 	cursor: pointer;
 	display: inline-block;
@@ -1608,7 +1608,7 @@ p.entry-meta {
 .comment-meta,
 .entry-comments .comment-header,
 .entry-comments .comment-reply {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: sans-serif;
 	font-weight: 300;
 }
 
@@ -1640,7 +1640,7 @@ p.entry-meta {
 .footer-widgets {
 	background-color: #222;
 	clear: both;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family:  sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 300;
@@ -1678,7 +1678,7 @@ p.entry-meta {
 .site-footer {
 	background-color: #222;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: sans-serif;
 	font-size: 14px;
 	font-size: 1.4rem;
 	font-weight: 300;
@@ -1911,7 +1911,7 @@ p.entry-meta {
 	.js .genesis-nav-menu .menu-item a {
 		border: none;
 		color: #fff;
-		font-family: 'Roboto Condensed', sans-serif;
+		font-family:  sans-serif;
 		padding: 20px;
 		width: 100%;
 	}
