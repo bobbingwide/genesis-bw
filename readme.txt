@@ -1,10 +1,10 @@
 === genesis-bw ===
 Contributors: bobbingwide
-Donate link: http://www.oik-plugins.com/oik/oik-donate/
+Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
-Requires at least: 4.7
-Tested up to: 4.7.1
-Version: 0.0.2
+Requires at least: 5.5
+Tested up to: 5.6-RC2
+Version: 0.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,8 +12,6 @@ Genesis Child Theme for the main bobbing wide website
 
 == Description ==
 genesis-bw is a child theme for the Genesis Theme Framework
-
-
 
 == Widget Areas ==
 - Primary Sidebar - This is the primary sidebar if you are using the Content/Sidebar or Sidebar/Content Site Layout option.
@@ -38,6 +36,10 @@ genesis-bw is a child theme for the Genesis Theme Framework
 
 
 == Change Log ==
+= 0.0.3 =
+* Changed: Added reduced quality images for the background images on the front-page
+* Changed: Eliminated the Roboto-Condensed Google font
+
 = 0.0.2 =
 * Added: archive.php and archive.css for improved display of plugins, themes and portfolio
 
@@ -48,7 +50,7 @@ genesis-bw is a child theme for the Genesis Theme Framework
 * Added: Originally just a clone of StudioPress's Workstation Pro theme v1.0.0
 
 == Copyright ==
-(C) Copyright Bobbing Wide 2017
+(C) Copyright Bobbing Wide 2017-2020
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
