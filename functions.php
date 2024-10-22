@@ -7,7 +7,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'genesis_bw', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'genesis_bw' ) );
+//load_child_theme_textdomain( 'genesis_bw', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'genesis_bw' ) );
 
 //* Add Image upload and Color select to WordPress Theme Customizer
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -16,7 +16,7 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'Genesis BW Theme', 'genesis_bw' ) );
+define( 'CHILD_THEME_NAME', 'Genesis BW Theme' );
 define( 'CHILD_THEME_URL', 'https://www.bobbingwide.com/oik-themes/genesis-bw/' );
 
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
