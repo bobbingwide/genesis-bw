@@ -3,8 +3,8 @@ Contributors: bobbingwide
 Donate link: https://www.oik-plugins.com/oik/oik-donate/
 Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 Requires at least: 5.5
-Tested up to: 5.6-RC2
-Version: 0.0.3
+Tested up to: 6.7-beta3
+Version: 0.1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,8 +22,6 @@ genesis-bw is a child theme for the Genesis Theme Framework
 - Flexible Footer - This is the footer section.
 - After Entry - This is the widget that appears after the entry on single posts.
 
-
-
 == Installation ==
 
 1. Purchase and Install the Genesis parent theme
@@ -36,6 +34,11 @@ genesis-bw is a child theme for the Genesis Theme Framework
 
 
 == Change Log ==
+= 0.1.0 =
+* Changed: Don't attempt to load a child theme text domain #6
+* Tested: With WordPress 6.7-beta3 and WordPress Multisite
+* Tested: With PHP 8.3
+
 = 0.0.3 =
 * Changed: Added reduced quality images for the background images on the front-page
 * Changed: Eliminated the Roboto-Condensed Google font
@@ -50,7 +53,7 @@ genesis-bw is a child theme for the Genesis Theme Framework
 * Added: Originally just a clone of StudioPress's Workstation Pro theme v1.0.0
 
 == Copyright ==
-(C) Copyright Bobbing Wide 2017-2020
+(C) Copyright Bobbing Wide 2017-2024
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

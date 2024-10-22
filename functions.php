@@ -1,4 +1,4 @@
-<?php	// (C) Copright Bobbing Wide 2017
+<?php	// (C) Copright Bobbing Wide 2017-2024
 
 //* Start the engine
 include_once( get_template_directory() . '/lib/init.php' );
