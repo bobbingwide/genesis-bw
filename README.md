@@ -4,8 +4,8 @@
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 * Requires at least: 5.5
-* Tested up to: 6.7-beta3
-* Version: 0.1.0
+* Tested up to: 6.7.1
+* Version: 0.1.1
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,11 @@ genesis-bw is a child theme for the Genesis Theme Framework
 
 
 ## Change Log 
+# 0.1.0 
+* Changed: Only run code in response to after_setup_theme priority 11. #6
+* Tested: With WordPress 6.7.1 and WordPress Multisite
+* Tested: With PHP 8.3
+
 # 0.1.0 
 * Changed: Don't attempt to load a child theme text domain #6
 * Tested: With WordPress 6.7-beta3 and WordPress Multisite
