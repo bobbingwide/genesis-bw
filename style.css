@@ -5,10 +5,10 @@ Description: Genesis child theme for Bobbing Wide
 Author: Bobbing Wide 
 Author URI: https://bobbingwide.com/about-bobbing-wide
 
-Version: 0.1.1
+Version: 0.2.0
 
 Template: genesis
-Template Version: 3.5.1-beta1
+Template Version: 3.6.1
 
 Tags: develop, black, orange, white, one-column, two-columns, left-sidebar, right-sidebar, responsive-layout, accessibility-ready, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 
@@ -178,7 +178,7 @@ textarea:focus,
 }
 
 a {
-	color: #ff4800;
+	color: #d63d00;
 	text-decoration: underline;
 }
 
@@ -412,7 +412,7 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .widget .button {
-	background-color: #ff4800;
+	background-color: #d63d00;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -787,14 +787,14 @@ th {
 
 .entry-title a:focus,
 .entry-title a:hover  {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .author-box-title,
 .archive-title,
 .page-title,
 .widget-title {
-	color: #ff4800;
+	color: #d63d00;
 	font-family:  sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
@@ -916,7 +916,7 @@ img.alignright,
 
 .widget li a:focus,
 .widget li a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .widget .list li {
@@ -1008,7 +1008,7 @@ img.alignright,
 
 .flexible-widgets .featured-content .has-post-thumbnail .alignnone + .entry-header .entry-title a:focus,
 .flexible-widgets .featured-content .has-post-thumbnail .alignnone + .entry-header .entry-title a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .flexible-widgets .featured-content .entry a.alignnone + .entry-content,
@@ -1089,8 +1089,11 @@ img.alignright,
 
 .site-title {
 	font-family:  sans-serif;
+    /*
 	font-size: 24px;
 	font-size: 2.4rem;
+	
+     */
 	font-weight: 300;
 	letter-spacing: 2px;
 	line-height: 1.2;
@@ -1134,7 +1137,7 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 
 .after-header {
-	border-bottom: 1px solid #ff4800;
+	border-bottom: 1px solid #d63d00;
 	margin-bottom: 30px;
 	padding: 30px 0;
 }
@@ -1188,16 +1191,16 @@ img.alignright,
 .genesis-nav-menu > .current-menu-item > a,
 .genesis-nav-menu > li > a:focus,
 .genesis-nav-menu > li > a:hover {
-	border-bottom: 2px solid #ff4800;
+	border-bottom: 2px solid #d63d00;
 }
 
 .genesis-nav-menu .sub-menu a:focus,
 .genesis-nav-menu .sub-menu a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .genesis-nav-menu .sub-menu {
-	border-top: 2px solid #ff4800;
+	border-top: 2px solid #d63d00;
 	left: -9999px;
 	margin-top: -2px;
 	opacity: 0;
@@ -1312,7 +1315,7 @@ img.alignright,
 .nav-secondary .genesis-nav-menu .sub-menu a:focus,
 .nav-secondary .genesis-nav-menu .sub-menu a:hover,
 .nav-secondary .genesis-nav-menu .sub-menu .current-menu-item > a {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 /* Responsive Menu
@@ -1330,7 +1333,7 @@ img.alignright,
 
 .add-color .after-header,
 .add-color .site-header {
-	background-color: #ff4800;
+	background-color: #d63d00;
 }
 
 .add-color .after-header a,
@@ -1375,7 +1378,7 @@ img.alignright,
 --------------------------------------------- */
 
 .front-page-1 {
-	border-bottom: 1px solid #ff4800;
+	border-bottom: 1px solid #d63d00;
 }
 
 .front-page-3,
@@ -1384,9 +1387,14 @@ img.alignright,
 	color: #fff;
 }
 
+.front-page-3 .widget-title,
+.footer-widgets .widget-title {
+    color: #ff4800;
+}
+
 .front-page-3 a:focus,
 .front-page-3 a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .image-section-1,
@@ -1513,7 +1521,7 @@ p.entry-meta {
 
 .entry-header .entry-meta,
 .featured-content .entry-meta {
-	color: #ff4800;
+	color: #d63d00;
 	letter-spacing: 2px;
 	margin-bottom: 24px;
 	text-transform: uppercase;
@@ -1569,7 +1577,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination .active a {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 /* ## Comments
@@ -1658,7 +1666,7 @@ p.entry-meta {
 
 .footer-widgets a:focus,
 .footer-widgets a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 .footer-widgets li {
@@ -1696,7 +1704,7 @@ p.entry-meta {
 
 .site-footer a:focus,
 .site-footer a:hover {
-	color: #ff4800;
+	color: #d63d00;
 }
 
 
