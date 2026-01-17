@@ -1,4 +1,4 @@
-/* (C) Copyright Bobbing Wide 2013-2017 */
+/* (C) Copyright Bobbing Wide 2013-2017, 2026 */
  @import url('../../plugins/oik-bob-bing-wide/bwlink.css' );
 
 a.bwlogo { text-decoration: none; padding-left: 3%; padding-top: 3%; }
@@ -68,8 +68,14 @@ div.slider-wrapper {
 	border: 1px solid grey;
 }
 
-a.bwlogo {
+footer a.bwlogo {
 	display: block;
 	text-align: right;
+    /* background-color: #ffffff; */
 }
-
+footer em.hbw_b3 { color: #d21e4b; }
+footer em.hbw_i1 { color: #3661e2;}
+footer em.hbw_n { color: #7651e6; }
+footer em.hbw_g { color: #ac1fdb; }
+footer em.hbw_W { color: #6e6e6e; }
+footer em.hbw_i2 { color: #757575; }
