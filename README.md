@@ -4,8 +4,8 @@
 * Donate link: https://www.oik-plugins.com/oik/oik-donate/
 * Tags: genesis, one-column, two-columns, sidebars, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
 * Requires at least: 5.5
-* Tested up to: 6.7.1
-* Version: 0.1.1
+* Tested up to: 6.9
+* Version: 0.2.0
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,7 +35,14 @@ genesis-bw is a child theme for the Genesis Theme Framework
 
 
 ## Change Log 
-# 0.1.0 
+# 0.2.0 
+* Accessibility: Improve color contrast for reds on white and dark backgrounds #7
+* Accessibility: Color contrast - style letters in bobbing wide for dark background #7
+* Changed: Accessibility: No longer filter genesis_pre_get_option_footer_text #7
+* Tested: With WordPress 6.9 and WordPress Multisite
+* Tested: With PHP 8.3
+
+# 0.1.1 
 * Changed: Only run code in response to after_setup_theme priority 11. #6
 * Tested: With WordPress 6.7.1 and WordPress Multisite
 * Tested: With PHP 8.3
@@ -59,7 +66,7 @@ genesis-bw is a child theme for the Genesis Theme Framework
 * Added: Originally just a clone of StudioPress's Workstation Pro theme v1.0.0
 
 ## Copyright 
-(C) Copyright Bobbing Wide 2017-2024
+(C) Copyright Bobbing Wide 2017-2026
 
 * This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
