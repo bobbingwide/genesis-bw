@@ -309,7 +309,7 @@ function genesis_bw_after_setup_theme() {
 
 	add_theme_support( 'woocommerce' );
 
-	add_filter( 'genesis_pre_get_option_footer_text', 'genesis_bw_footer_creds_text' );
+	//add_filter( 'genesis_pre_get_option_footer_text', 'genesis_bw_footer_creds_text' );
 
 	/**
 	 * Implement 'genesis_footer_creds_text' filter
